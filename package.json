@@ -1,0 +1,32 @@
+{
+  "name": "spm-lcov-action",
+  "version": "0.3.1",
+  "description": "Swift Package Manager Code Coverage Report.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "ncc build index.js -o dist --license licenses.txt && cp cov.sh dist/cov.sh && chmod +x dist/cov.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/step-security/spm-lcov-action.git"
+  },
+  "keywords": [
+    "swift",
+    "spm",
+    "coverage"
+  ],
+  "author": "step-security",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/step-security/spm-lcov-action/issues"
+  },
+  "homepage": "https://github.com/step-security/spm-lcov-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/exec": "^1.0.3",
+    "axios": "1.15.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  }
+}
